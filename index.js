@@ -1,10 +1,10 @@
-var Promise          = require('ember-cli/lib/ext/promise');
+var RSVP             = require('rsvp');
 var child_process    = require('child_process');
 var DeployPluginBase = require('ember-cli-deploy-plugin');
 
 var tagRepo = function(tag, revision, message) {
   var _this = this;
-  return new Promise(function(resolve, reject) {
+  return new RSVP.Promise(function(resolve, reject) {
     child_process.exec('git tag -f ' + tag + ' ' + revision, function(e) {
       if (e) {
         _this.log(e, { color: 'red' });
@@ -56,7 +56,7 @@ module.exports = {
         if (tag == null) {
           return;
         }
-        
+
         var revision = context.revisionData.activatedRevisionKey;
         return tagRepo.apply(this, [tag, revision, "tagged " + tag + " as activated"]);
       }
