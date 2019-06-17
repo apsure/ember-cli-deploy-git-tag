@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-deploy-git-tag",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Tag Ember releases in git",
   "keywords": [
     "ember-addon",
