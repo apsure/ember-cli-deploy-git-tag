@@ -2,6 +2,8 @@ var RSVP             = require('rsvp');
 var child_process    = require('child_process');
 var DeployPluginBase = require('ember-cli-deploy-plugin');
 
+'use strict';
+
 var tagRepo = function(tag, revision, message) {
   var _this = this;
   return new RSVP.Promise(function(resolve, reject) {
@@ -18,7 +20,7 @@ var tagRepo = function(tag, revision, message) {
 };
 
 module.exports = {
-  name: 'ember-cli-deploy-git-tag',
+  name: require('./package').name,
 
   createDeployPlugin: function(options) {
     var DeployPlugin = DeployPluginBase.extend({
