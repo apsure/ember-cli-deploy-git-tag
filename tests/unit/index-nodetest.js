@@ -2,7 +2,7 @@
 
 'use strict';
 
-var Promise = require('ember-cli/lib/ext/promise');
+// var Promise = require('ember-cli/lib/ext/promise');
 var assert  = require('ember-cli/tests/helpers/assert');
 
 var stubProject = {
