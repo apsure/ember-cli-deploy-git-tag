@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-deploy-git-tag",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Tag Ember releases in git",
   "directories": {
     "doc": "doc",
@@ -47,7 +47,8 @@
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.3",
-    "ember-cli-deploy-plugin": "0.2.0"
+    "ember-cli-deploy-plugin": "0.2.0",
+    "rsvp": "^3.5.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
